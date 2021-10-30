@@ -1,0 +1,3 @@
+sudo apt-get install cmatrix
+sudo apt-get install fortune 
+sudo apt-get install cowsay

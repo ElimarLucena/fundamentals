@@ -1,0 +1,34 @@
+.imagem {
+    border-radius: 100%;
+}
+.web{
+    color: #11a36a;
+    background-color: #044d31;
+    padding: 15px;
+    text-align: center;
+}
+.webb{
+    color: #86828a;
+    text-align: center;
+}
+.text {
+    color: #86828a;
+    font-size: 18px;
+    text-align: center;
+}
+.button{
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: #044d31;
+    color: #11a36a;
+}
+.list{
+    width: 5%;
+    margin: auto;
+    padding-top: 0px;
+    padding-bottom: 35px;
+}
+body{
+    background-color: rgb(10, 10, 10);
+}
