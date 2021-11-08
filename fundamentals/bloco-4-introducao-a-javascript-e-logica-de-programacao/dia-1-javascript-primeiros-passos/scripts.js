@@ -101,11 +101,48 @@ if (note >= 90) {
 }
 */
 
-const numberOne = 4;
-const numberTwo = 8;
-const numberThree = 9;
-numberOne % 2;
+/*
+const numberOne = 3;
+const numberTwo = 5;
+const numberThree = 8;
 
-if (numberOne === 2) {
+if ((numberOne % 2 === 0) || (numberTwo % 2 === 0) || (numberThree % 2 === 0)) {
     console.log("true");
+}else {
+    console.log("false");
 }
+*/
+
+/*
+const numberOne = 4;
+const numberTwo = 3;
+const numberThree = 8;
+
+if ((numberOne % 2 === 1) || (numberTwo % 2 === 1) || (numberThree % 2 === 1)) {
+    console.log("true");
+}else {
+    console.log("false");
+}
+*/
+
+/*
+const costOfAProduct = 50;
+const tax = (costOfAProduct * 20) / 100;
+const totalCostValue = costOfAProduct + tax;
+const saleValue = 75;
+
+if ((saleValue - totalCostValue) > 0) {
+    profit = (saleValue -totalCostValue) * 1000;
+    console.log(`The company's profit was ${profit}`);
+} else if ((saleValue - totalCostValue) == 0) {
+    console.log(`the company's profit cannot be zero`);
+} else {
+    console.log(`your company is losing money`);
+}
+*/
+
+
+
+
+
+
