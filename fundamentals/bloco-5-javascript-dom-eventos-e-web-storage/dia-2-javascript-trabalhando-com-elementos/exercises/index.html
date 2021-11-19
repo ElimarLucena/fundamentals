@@ -64,13 +64,16 @@
         body.appendChild(onTitle);
 
         let onMain = document.createElement('main');
-        onMain.classList.add("main-content");
+        onMain.classList.add('main-content');
         body.appendChild(onMain);
 
         let onSection = document.createElement('section');
         onSection.classList.add('center-content');
         onMain.appendChild(onSection);
 
+        let paragraph = document.createElement('p');
+        paragraph.innerText = 'Hello good Morning!';
+        onSection.appendChild(paragraph);
     </script>
 </body>
 </html>
