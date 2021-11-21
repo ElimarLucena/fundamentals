@@ -18,11 +18,9 @@ createDaysOfTheWeek();
     
 function dayCalender (dayList){
     let ulList = document.getElementById('days');
-    let days;
-    let onLi
     for (let index = 0; index < dayList.length; index += 1){
-        days = dayList[index];
-        onLi = document.createElement('li');
+        let days = dayList[index];
+        let onLi = document.createElement('li');
         onLi.classList.add('day');
         onLi.innerText = days;
         ulList.appendChild(onLi);
@@ -53,3 +51,11 @@ function dayCalender (dayList){
 dayCalender(dezDaysList);
 
 //exercise 2:
+function onHoliday (str){
+    let button = document.getElementsByClassName('buttons-container')[0];
+    let onButton = document.createElement('button');
+    onButton.id = 'btn-holiday';
+    onButton.innerText = str;
+    button.appendChild(onButton);
+}
+onHoliday('Feriado');
