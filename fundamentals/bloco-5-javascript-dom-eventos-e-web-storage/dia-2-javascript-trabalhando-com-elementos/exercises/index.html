@@ -33,7 +33,7 @@
         .main-content .left-content {
         background-color: green;
         width: 60%;
-        margin-left: 0;
+        margin-left: auto;
         margin-right: auto;
         }
 
@@ -58,39 +58,66 @@
 </head>
 <body>
     <script>
-        // COLOQUE SEU CÓDIGO AQUI
+        // exercise 1.
         let body = document.querySelector('body');
         let onTitle = document.createElement('h1');
         onTitle.innerText = 'Exercício 5.2 - JavaScript DOM ';
         body.appendChild(onTitle);
 
+        //exercise 2.
         let onMain = document.createElement('main');
         onMain.classList.add('main-content');
         body.appendChild(onMain);
 
+        //exercise 3.
         let onSection = document.createElement('section');
         onSection.classList.add('center-content');
         onMain.appendChild(onSection);
 
+        //exercise 4.
         let paragraph = document.createElement('p');
         paragraph.innerText = 'Hello good Morning!';
         onSection.appendChild(paragraph);
 
+        //exercise 5.
         let onSectionTwo = document.createElement('section');
         onSectionTwo.classList.add('left-content');
         onMain.appendChild(onSectionTwo);
 
+        //exercise 6.
         let onSectionThree = document.createElement('section');
         onSectionThree.classList.add('rigth-content');
         onMain.appendChild(onSectionThree);
 
+        //exercise 7.
         // Source: https://cursos.alura.com.br/forum/topico-inserir-imagem-dentro-do-javascript-89494?gclid=CjwKCAiAs92MBhAXEiwAXTi255DuWQcB4DiGYX4uEKHpCQ1FIUebInac1qa_IfzxOGnrZxb98F0b_BoCdEUQAvD_BwE
         let img = document.createElement('img');
         img.src = 'https://picsum.photos/200';
         img.classList.add('small-image');
         onSectionTwo.appendChild(img);
 
-        
+        //exercise 8.
+        let onList = document.createElement('ul');
+        onSectionThree.appendChild(onList);
+        let dayList = [
+            'one','two','three','four','five','six','seven','eight','nine','ten',
+        ] 
+        for (let index = 0; index < dayList.length; index += 1){
+            let days = dayList[index];
+            let onLi = document.createElement('li');
+            onLi.innerText = days;
+            onList.appendChild(onLi);
+        }
+
+        //exercise 9.
+        let onHThree = document.createElement('h3');
+        onMain.appendChild(onHThree);
+
+        let onHThreeTwo = document.createElement('h3');
+        onMain.appendChild(onHThreeTwo);
+
+        let onHThreeThree = document.createElement('h3');
+        onMain.appendChild(onHThreeThree);
     </script>
 </body>
 </html>
