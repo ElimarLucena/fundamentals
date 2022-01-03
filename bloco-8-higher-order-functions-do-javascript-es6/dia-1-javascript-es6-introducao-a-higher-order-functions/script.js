@@ -34,40 +34,36 @@ const prizeDraw = (number, callback) => {
 
 // exercise 3:
 
-// const rightAnswers =  ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
-// const studentAnswers = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+const rightAnswers =  ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const studentAnswers = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 
-// const checkAnswers = (onRight, onStudent) => {
-//     let sum = 0;
-//     for (let index = 0; index <= onRight; index += 1) {
-//         if (onRight[index] === onStudent[index]) {
-//             sum += 1;
-//         } else {
-//             sum += -0.5; 
-//         }
-//         if(onStudent[index] === 'N.A') {
-//             continue
-//         }
-//     }
-//     return sum;
-// };
+const checkAnswers = (onRight, onStudent) => {
+    let sum = 0;
+    onRight.forEach((item, index) => {
+        if (item.includes(onStudent[index])) {
+            sum += 1;
+        } else {
+            sum += -0.5;
+        }
+        if(onStudent[index] === 'N.A') {
+            sum += 0.5;
+        }
+    });
+    return sum;
+};
 
-// const answers = (right, student, callback) => {
-//     let onRight = 0;
-//     let onWrong = 0;
-//     right.forEach((item, index) => {
-//         if (item.includes(student[index])) {
-//             onRight += 1;
-//         } else {
-//             onWrong += 1;
-//         }
-//     });
+const answers = (right, student, callback) => {
+    let onRight = 0;
+    right.forEach((item, index) => {
+        if (item.includes(student[index])) {
+            onRight += 1;
+        } 
+    });
     
-//     return `Respostas certas: ${onRight}.
-// Respostas erradas: ${onWrong}.
-// Pontuação: ${callback()}.`
-// };
+    return `Respostas certas: ${onRight}.
+Pontuação: ${callback(right, student)}.`
+};
 
-// checkAnswers(rightAnswers, studentAnswers);
+// console.log(checkAnswers(rightAnswers, studentAnswers));
 
-// console.log(answers(rightAnswers, studentAnswers, checkAnswers));
+console.log(answers(rightAnswers, studentAnswers, checkAnswers));
